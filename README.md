@@ -1,2 +1,2 @@
 # e-kepegawaian
-sistem layanan kepegawaian berbasis web
+aplikasi layanan kepegawaian berbasis web
