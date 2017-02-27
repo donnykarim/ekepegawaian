@@ -40,7 +40,11 @@ $this->load->library('grocery_CRUD');
 
 	public function index()
 	{
-		$this->load->view('login');	 		
+		
+		$this->load->view('header');
+		$this->load->view('users/sidebar');
+		$this->load->view('users/content');
+		$this->load->view('footer');	 		
 	}
 
 	public function report()

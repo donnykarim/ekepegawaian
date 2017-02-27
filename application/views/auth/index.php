@@ -2,6 +2,10 @@
 <p><?php echo lang('index_subheading');?></p>
 
 <div id="infoMessage"><?php echo $message;?></div>
+<?php
+$user = $this->ion_auth->user()->row();
+echo $user->kd_unor;
+?>
 
 <table cellpadding=0 cellspacing=10>
 	<tr>

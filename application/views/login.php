@@ -58,8 +58,6 @@
       </div>
     </form>
 
-    <a href="#">I forgot my password</a><br>
-
   </div>
   <!-- /.login-box-body -->
 </div>
