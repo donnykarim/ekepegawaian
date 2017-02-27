@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Dashboard extends CI_Controller {
 
 	public function __construct()
 	{
@@ -23,32 +23,33 @@ class Auth extends CI_Controller {
 			// redirect them to the login page
 			redirect('auth/login', 'refresh');			
 		}
-/*		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
+		elseif (!$this->ion_auth->in_group('usersopd')) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an administrator to view this page.');
-		}*/
-		elseif ($this->ion_auth->in_group('usersopd')) // jika user group usersopd
-		{
-			redirect('users/dashboard', 'refresh');
-		}
-		elseif ($this->ion_auth->in_group('managers')) // jika user group managers
-		{
-			redirect('managers/dashboard', 'refresh');
+			return show_error('You must be an Users OPD to view this page.');
 		}
 		else
 		{
-			// set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			// // set the flash data error message if there is one
+			// $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
-			//list the users
-			$this->data['users'] = $this->ion_auth->users()->result();
-			foreach ($this->data['users'] as $k => $user)
-			{
-				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-			}
+			// //list the users
+			// $this->data['users'] = $this->ion_auth->users()->result();
+			// foreach ($this->data['users'] as $k => $user)
+			// {
+			// 	$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
+			// }
 
-			$this->_render_page('auth/index', $this->data);
+			//$this->_render_page('auth/index', $this->data);
+			$user = $this->ion_auth->user()->row();
+        	$data['fname'] = $user->first_name;
+        	$data['lname'] = $user->last_name;
+        	$data['company'] = $user->company;
+
+			$this->load->view('header',$data);
+			$this->load->view('users/sidebar');
+			$this->load->view('users/dashboard_content');
+			$this->load->view('footer');
 		}
 	}
 
