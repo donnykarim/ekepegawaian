@@ -62,13 +62,13 @@
 
                 <p>
                   <?php echo $fname;?>&nbsp;<?php echo $lname;?> - <?php echo $company;?>
-                  <small>Member since 2017</small>
+                  <small>User sejak 2017</small>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="<?php echo base_url();?>auth/change_password" class="btn btn-default btn-flat">Ubah password</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?php echo base_url();?>auth/logout" class="btn btn-default btn-flat">Sign out</a>

@@ -24,59 +24,50 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="#">e-<b>Kepegawaian</b></a>
+<body class="hold-transition register-page">
+<div class="register-box">
+  <div class="register-logo">
+    <a href="#">Ubah Password</a>
   </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Sign in untuk memulai session</p>
-    <p class="login-box-msg"><?php echo $message ; ?></p>
-    <form action="<?php echo base_url('auth/login'); ?>" method="post">
+
+  <div class="register-box-body">
+    <p class="login-box-msg">panjang password min 8 karakter</p>
+    <?php echo $message;?>
+    <?php echo form_open("auth/change_password");?>
       <div class="form-group has-feedback">
-        <input id="identity" name="identity" type="username" class="form-control" placeholder="Username">
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input id="password" name="password" type="password" class="form-control" placeholder="Password">
+        <input id="old" name="old" type="password" pattern="^.{8}.*$" class="form-control" placeholder="Password lama">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
+      <div class="form-group has-feedback">
+        <input id="new" name="new" pattern="^.{8}.*$" type="password" class="form-control" placeholder="Password baru">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input id="new_confirm" name="new_confirm" pattern="^.{8}.*$" type="password" class="form-control" placeholder="Ketik ulang password baru">
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+      </div>
+      <?php echo form_input($user_id);?>
       <div class="row">
         <div class="col-xs-8">
-          <div class="checkbox icheck">
             <label>
-              <input id="remember" name="remember" value="1" type="checkbox"> Ingat saya
+              <a class="btn btn-info btn-flat" href="<?php echo base_url('auth'); ?>">Batal</a>
             </label>
-          </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Ubah</button>
         </div>
         <!-- /.col -->
       </div>
-    </form>
-
+    <?php echo form_close();?>
   </div>
-  <!-- /.login-box-body -->
+  <!-- /.form-box -->
 </div>
-<!-- /.login-box -->
+<!-- /.register-box -->
 
 <!-- jQuery 2.2.3 -->
 <script src="<?php echo base_url();?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="<?php echo base_url();?>assets/plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
-  });
-</script>
 </body>
 </html>

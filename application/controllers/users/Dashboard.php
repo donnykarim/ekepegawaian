@@ -45,10 +45,11 @@ class Dashboard extends CI_Controller {
         	$data['fname'] = $user->first_name;
         	$data['lname'] = $user->last_name;
         	$data['company'] = $user->company;
+        	$data['user_kd_unor'] = $user->kd_unor;
 
 			$this->load->view('header',$data);
 			$this->load->view('users/sidebar');
-			$this->load->view('users/dashboard_content');
+			$this->load->view('users/content_form');
 			$this->load->view('footer');
 		}
 	}
