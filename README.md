@@ -1,2 +1,2 @@
-# e-kepegawaian
-aplikasi layanan kepegawaian berbasis web
+# SAKTi
+Sistem Aplikasi Kepegawaian Terintegrasi
