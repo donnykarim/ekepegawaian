@@ -42,14 +42,14 @@
       <ul class="sidebar-menu">
         <li class="header">NAVIGASI UTAMA</li>
         <li class="treeview">
-          <a href="#">
+          <a href="<?php echo base_url();?>users/dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
+<!--             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            </span> -->
           </a>
         </li>
-        <li class="treeview">
+<!--         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Layout Options</span>
@@ -116,29 +116,34 @@
             <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
             <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
           </ul>
-        </li>
+        </li> -->
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-table"></i> <span>Tables</span>
+            <i class="fa fa-table"></i> <span>Data Induk</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+           <ul class="treeview-menu">
+            <li><a href="<?php echo base_url();?>users/datainduk_datainti"><i class="fa fa-circle-o"></i> Data PNS</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Data Non PNS</a></li>
           </ul>
         </li>
         <li>
-          <a href="../calendar.html">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
+          <a href="#">
+            <i class="fa fa-usd"></i> <span>Gaji Berkala</span>
             <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
+              <i class="fa fa-angle-left pull-right"></i>
+              <small class="label pull-right bg-red">New</small>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Penjagaan</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Usulan</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Laporan</a></li>
+          </ul>
         </li>
-        <li>
+<!--        <li>
           <a href="../mailbox/mailbox.html">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
@@ -204,7 +209,7 @@
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
       </ul>
     </section>
     <!-- /.sidebar -->

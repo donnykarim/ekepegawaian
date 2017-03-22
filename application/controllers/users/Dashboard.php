@@ -30,17 +30,7 @@ class Dashboard extends CI_Controller {
 		}
 		else
 		{
-			// // set the flash data error message if there is one
-			// $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-
-			// //list the users
-			// $this->data['users'] = $this->ion_auth->users()->result();
-			// foreach ($this->data['users'] as $k => $user)
-			// {
-			// 	$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-			// }
-
-			//$this->_render_page('auth/index', $this->data);
+			//tampilkan halaman dashboard
 			$user = $this->ion_auth->user()->row();
         	$data['fname'] = $user->first_name;
         	$data['lname'] = $user->last_name;
@@ -49,7 +39,7 @@ class Dashboard extends CI_Controller {
 
 			$this->load->view('header',$data);
 			$this->load->view('users/sidebar');
-			$this->load->view('users/content_form');
+			$this->load->view('users/content_dashboard');
 			$this->load->view('footer');
 		}
 	}
