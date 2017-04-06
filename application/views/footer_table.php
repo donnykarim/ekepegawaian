@@ -10,6 +10,9 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="<?php echo base_url();?>assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- SlimScroll -->
@@ -18,6 +21,9 @@
 <script src="<?php echo base_url();?>assets/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>assets/dist/js/app.min.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url();?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,6 +33,30 @@
   ga('create', 'UA-96145388-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    var dataTable = $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true,
+      "dom": 'lrtp',
+      "language": {
+          "url": "http://cdn.datatables.net/plug-ins/1.10.9/i18n/Indonesian.json",
+          "sEmptyTable": "Tidak ada data di database"
+      }
+    });
+
+    $("#InputCari").keyup(function() {
+      dataTable.search(this.value).draw();
+    });
+
+  });
 </script>
 </body>
 </html>

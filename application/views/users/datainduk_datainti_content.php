@@ -4,13 +4,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
-        <small>it all starts here</small>
+        Data Induk PNS
+        <small>silahkan lakukan pengecekan terhadap data PNS di OPD Anda</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
+        <li><a href="#"><i class="fa fa-table"></i> Home</a></li>
+        <li><a href="#">Data Induk</a></li>
+        <li class="active">PNS</li>
       </ol>
     </section>
 
@@ -19,7 +19,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Title</h3>
+          <h3 class="box-title">PNS</h3>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
               <i class="fa fa-minus"></i></button>
@@ -32,7 +32,7 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-          Footer
+          &nbsp;
         </div>
         <!-- /.box-footer-->
       </div>

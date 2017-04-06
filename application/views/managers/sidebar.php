@@ -42,8 +42,16 @@
       <ul class="sidebar-menu">
         <li class="header">NAVIGASI UTAMA</li>
         <li class="treeview">
-          <a href="<?php echo base_url();?>users/dashboard">
+          <a href="<?php echo base_url();?>managers/dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+<!--             <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span> -->
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="<?php echo base_url();?>managers/search">
+            <i class="fa fa-search"></i> <span>Pencarian</span>
 <!--             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span> -->
@@ -125,22 +133,8 @@
             </span>
           </a>
            <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>users/datainduk_datainti"><i class="fa fa-circle-o"></i> Data PNS</a></li>
+            <li><a href="<?php echo base_url();?>managers/datainduk_datainti"><i class="fa fa-circle-o"></i> Data PNS</a></li>
 <!--             <li><a href="#"><i class="fa fa-circle-o"></i> Data Non PNS</a></li> -->
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-usd"></i> <span>Gaji Berkala</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-              <small class="label pull-right bg-red">New</small>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>users/gajiberkala/penjagaan"><i class="fa fa-circle-o"></i> Penjagaan</a></li>
-            <li><a href="<?php echo base_url();?>users/gajiberkala/usulan"><i class="fa fa-circle-o"></i> Usulan</a></li>
-            <li><a href="<?php echo base_url();?>users/gajiberkala/laporan"><i class="fa fa-circle-o"></i> Laporan</a></li>
           </ul>
         </li>
 <!--        <li>

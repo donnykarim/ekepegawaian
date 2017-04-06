@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Dashboard extends CI_Controller {
 
 	public function __construct()
 	{
@@ -23,33 +23,25 @@ class Auth extends CI_Controller {
 			// redirect them to the login page
 			redirect('auth/login', 'refresh');			
 		}
-/*		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
+		elseif (!$this->ion_auth->in_group('managers')) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an administrator to view this page.');
-		}*/
-/*		elseif ($this->ion_auth->in_group('usersopd')) // jika user group usersopd
-		{
-			redirect('users/dashboard', 'refresh');
-		}
-		elseif ($this->ion_auth->in_group('managers')) // jika user group managers
-		{
-			redirect('managers/dashboard', 'refresh');
+			return show_error('You must be an Managers to view this page.');
 		}
 		else
 		{
-			// set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+			//tampilkan halaman dashboard
+			$user = $this->ion_auth->user()->row();
+        	$data['fname'] = $user->first_name;
+        	$data['lname'] = $user->last_name;
+        	$data['company'] = $user->company;
+        	$data['user_kd_unor'] = $user->kd_unor;
 
-			//list the users
-			$this->data['users'] = $this->ion_auth->users()->result();
-			foreach ($this->data['users'] as $k => $user)
-			{
-				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-			}
-
-			$this->_render_page('auth/index', $this->data);
-		}*/
+			$this->load->view('header',$data);
+			$this->load->view('managers/sidebar');
+			$this->load->view('managers/dashboard_content');
+			$this->load->view('footer');
+		}
 	}
 
 	// log the user in
@@ -72,30 +64,7 @@ class Auth extends CI_Controller {
 				//if the login is successful
 				//redirect them back to the home page
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
-				//redirect('/', 'refresh');
-
-				if ($this->ion_auth->in_group('usersopd')) // jika user group usersopd
-				{
-					redirect('users/dashboard', 'refresh');
-				}
-				elseif ($this->ion_auth->in_group('managers')) // jika user group managers
-				{
-					redirect('managers/dashboard', 'refresh');
-				}
-				else
-				{
-					// set the flash data error message if there is one
-					$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-
-					//list the users
-					$this->data['users'] = $this->ion_auth->users()->result();
-					foreach ($this->data['users'] as $k => $user)
-					{
-						$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-					}
-
-					$this->_render_page('auth/index', $this->data);
-				}
+				redirect('/', 'refresh');
 			}
 			else
 			{
@@ -185,8 +154,7 @@ class Auth extends CI_Controller {
 			);
 
 			// render
-			//$this->_render_page('auth/change_password', $this->data);
-			$this->_render_page('changepass', $this->data);
+			$this->_render_page('auth/change_password', $this->data);
 		}
 		else
 		{
