@@ -34,29 +34,3 @@
   ga('send', 'pageview');
 
 </script>
-
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    var dataTable = $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
-      "dom": 'lrtp',
-      "language": {
-          "url": "http://cdn.datatables.net/plug-ins/1.10.9/i18n/Indonesian.json",
-          "sEmptyTable": "Tidak ada data di database"
-      }
-    });
-
-    $("#InputCari").keyup(function() {
-      dataTable.search(this.value).draw();
-    });
-
-  });
-</script>
-</body>
-</html>

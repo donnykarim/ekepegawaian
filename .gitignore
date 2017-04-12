@@ -6,6 +6,8 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
+assets/uploads/*
+
 # IDE Files
 #-------------------------
 /nbproject/

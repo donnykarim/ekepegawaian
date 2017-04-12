@@ -12,11 +12,6 @@ class Dashboard extends CI_Controller {
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
 		$this->lang->load('auth');
-	}
-
-	// redirect if needed, otherwise display the user list
-	public function index()
-	{
 
 		if (!$this->ion_auth->logged_in())
 		{
@@ -28,8 +23,12 @@ class Dashboard extends CI_Controller {
 			// redirect them to the home page because they must be an administrator to view this
 			return show_error('You must be an Users OPD to view this page.');
 		}
-		else
-		{
+	}
+
+	// redirect if needed, otherwise display the user list
+	public function index()
+	{
+
 			//tampilkan halaman dashboard
 			$user = $this->ion_auth->user()->row();
         	$data['fname'] = $user->first_name;
@@ -41,8 +40,14 @@ class Dashboard extends CI_Controller {
 			$this->load->view('users/sidebar');
 			$this->load->view('users/dashboard_content');
 			$this->load->view('footer');
-		}
 	}
+
+	
+
+
+
+
+
 
 	// log the user in
 	public function login()
