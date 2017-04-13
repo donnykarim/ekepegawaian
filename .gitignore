@@ -6,7 +6,6 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-application/config/*
 assets/uploads/*
 
 # IDE Files
