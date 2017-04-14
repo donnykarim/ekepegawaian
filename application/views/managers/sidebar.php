@@ -126,16 +126,14 @@
           </ul>
         </li> -->
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Data Induk</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+          <a href="<?php echo base_url();?>managers/jendela">
+            <i class="fa fa-th-large"></i> <span>Jendela</span>
           </a>
-           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>managers/datainduk_datainti"><i class="fa fa-circle-o"></i> Data PNS</a></li>
-<!--             <li><a href="#"><i class="fa fa-circle-o"></i> Data Non PNS</a></li> -->
-          </ul>
+        </li>  
+        <li class="treeview">
+          <a href="<?php echo base_url();?>managers/about">
+            <i class="fa fa-cube"></i> <span>Tentang</span>
+          </a>
         </li>
 <!--        <li>
           <a href="../mailbox/mailbox.html">

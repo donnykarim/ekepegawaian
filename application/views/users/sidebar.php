@@ -143,6 +143,16 @@
             <li><a href="<?php echo base_url();?>users/gajiberkala/laporan"><i class="fa fa-circle-o"></i> Laporan</a></li>
           </ul>
         </li>
+        <li class="treeview">
+          <a href="<?php echo base_url();?>users/jendela">
+            <i class="fa fa-th-large"></i> <span>Jendela</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="<?php echo base_url();?>users/about">
+            <i class="fa fa-cube"></i> <span>Tentang</span>
+          </a>
+        </li>
 <!--        <li>
           <a href="../mailbox/mailbox.html">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
