@@ -21,7 +21,7 @@ class Jendela extends CI_Controller {
 		elseif (!$this->ion_auth->in_group('managers')) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an Users OPD to view this page.');
+			return show_error('You must be an Managers to view this page.');
 		}
 		//$this->load->library('grocery_CRUD');	
 	}

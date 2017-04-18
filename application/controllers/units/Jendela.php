@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class About extends CI_Controller {
+class Jendela extends CI_Controller {
 
 	public function __construct()
 	{
@@ -18,10 +18,10 @@ class About extends CI_Controller {
 			// redirect them to the login page
 			redirect('auth/login', 'refresh');			
 		}
-		elseif (!$this->ion_auth->in_group('managers')) // remove this elseif if you want to enable this for non-admins
+		elseif (!$this->ion_auth->in_group('units')) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an Managers to view this page.');
+			return show_error('You must be an Units user to view this page.');
 		}
 		//$this->load->library('grocery_CRUD');	
 	}
@@ -35,9 +35,10 @@ class About extends CI_Controller {
         	$data['user_kd_unor'] = $user->kd_unor;
 
 			$this->load->view('header',$data);
-			$this->load->view('managers/sidebar');
-			$this->load->view('managers/about_content');
-			$this->load->view('footer');  
+			$this->load->view('units/sidebar');
+			$this->load->view('units/jendela_content');
+			$this->load->view('footer');
 	}
+
 
 }
