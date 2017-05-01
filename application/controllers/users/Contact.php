@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Contact extends CI_Controller {
 
 	public function __construct()
 	{
@@ -12,25 +12,22 @@ class Dashboard extends CI_Controller {
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
 		$this->lang->load('auth');
-	}
-
-	// redirect if needed, otherwise display the user list
-	public function index()
-	{
 
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
 			redirect('auth/login', 'refresh');			
 		}
-		elseif (!$this->ion_auth->in_group('managers')) // remove this elseif if you want to enable this for non-admins
+		elseif (!$this->ion_auth->in_group('usersopd')) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must not be here.');
+			return show_error('You must be an User OPD to view this page.');
 		}
-		else
-		{
-			//tampilkan halaman dashboard
+		//$this->load->library('grocery_CRUD');	
+	}
+
+	public function index()
+	{
 			$user = $this->ion_auth->user()->row();
         	$data['fname'] = $user->first_name;
         	$data['lname'] = $user->last_name;
@@ -38,11 +35,9 @@ class Dashboard extends CI_Controller {
         	$data['user_kd_unor'] = $user->kd_unor;
 
 			$this->load->view('header',$data);
-			$this->load->view('managers/sidebar');
-			$this->load->view('managers/dashboard_content');
-			$this->load->view('footer');
-		}
+			$this->load->view('users/sidebar');
+			$this->load->view('users/contact_content');
+			$this->load->view('footer');  
 	}
-
 
 }

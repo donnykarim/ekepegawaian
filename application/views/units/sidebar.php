@@ -129,6 +129,11 @@
           <a href="<?php echo base_url();?>units/jendela">
             <i class="fa fa-th-large"></i> <span>Jendela</span>
           </a>
+        </li>
+        <li class="treeview">
+          <a href="<?php echo base_url();?>units/contact">
+            <i class="fa fa-phone-square"></i> <span>Kontak</span>
+          </a>
         </li>  
         <li class="treeview">
           <a href="<?php echo base_url();?>units/about">

@@ -129,7 +129,12 @@
           <a href="<?php echo base_url();?>managers/jendela">
             <i class="fa fa-th-large"></i> <span>Jendela</span>
           </a>
-        </li>  
+        </li>
+        <li class="treeview">
+          <a href="<?php echo base_url();?>managers/contact">
+            <i class="fa fa-phone-square"></i> <span>Kontak</span>
+          </a>
+        </li>    
         <li class="treeview">
           <a href="<?php echo base_url();?>managers/about">
             <i class="fa fa-cube"></i> <span>Tentang</span>

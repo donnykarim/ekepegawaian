@@ -28,7 +28,7 @@ $(document).ready(function() {
         "order": [], //Initial no order.
         "dom": 'lrtp',
         "lengthChange": false,
-        "ordering": false,
+        "ordering": true,
         "autoWidth": true,
 
         // Load data for the table's content from an Ajax source

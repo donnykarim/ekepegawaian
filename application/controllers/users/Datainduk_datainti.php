@@ -76,7 +76,7 @@ class Datainduk_datainti extends CI_Controller {
             $crud->callback_edit_field('glrblk',array($this,'edit_glrblk_callback'));
             $crud->callback_edit_field('kd_gol',array($this,'edit_kd_gol_callback'));
             $crud->callback_edit_field('tmtgol',array($this,'edit_tmtgol_callback'));
-            $crud->callback_edit_field('kd_unor',array($this,'edit_kd_dikpim_callback'));
+            $crud->callback_edit_field('kd_unor',array($this,'edit_kd_kd_unor_callback'));
             $crud->callback_edit_field('kd_dikpim',array($this,'edit_kd_dikpim_callback'));
             $crud->callback_edit_field('thn_dikpim',array($this,'edit_thn_dikpim_callback'));
 

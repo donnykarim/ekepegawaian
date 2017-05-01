@@ -42,12 +42,26 @@
       <ul class="sidebar-menu">
         <li class="header">NAVIGASI UTAMA</li>
         <li class="treeview">
-          <a href="<?php echo base_url();?>users/dashboard">
+          <a href="<?php echo base_url();?>new/dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
 <!--             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span> -->
           </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>Data Induk</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+           <ul class="treeview-menu">
+            <li><a href="<?php echo base_url();?>new/datainduk_datainti"><i class="fa fa-circle-o"></i> Data PNS / CPNS</a></li>
+            <li><a href="<?php echo base_url();?>new/datainduk_datainti/rwypend"><i class="fa fa-circle-o"></i> Riwayat Pendidikan</a></li>
+            <li><a href="<?php echo base_url();?>new/datainduk_datainti/rwyistri"><i class="fa fa-circle-o"></i> Riwayat Istri / Suami</a></li>
+            <li><a href="<?php echo base_url();?>new/datainduk_datainti/rwyanak"><i class="fa fa-circle-o"></i> Riwayat Anak</a></li>
+          </ul>
         </li>
 <!--         <li class="treeview">
           <a href="#">
@@ -116,55 +130,19 @@
             <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
             <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
           </ul>
-        </li> -->
+        </li> 
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Data Induk</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>users/datainduk_datainti"><i class="fa fa-circle-o"></i> Data PNS</a></li>
-<!--             <li><a href="#"><i class="fa fa-circle-o"></i> Data Non PNS</a></li> -->
-          </ul>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-usd"></i> <span>Gaji Berkala</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-              <small class="label pull-right bg-red">New</small>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li>
-              <a href="#"><i class="fa fa-circle-o"></i> Penjagaan
-                <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="<?php echo base_url();?>users/gajiberkala/penjagaan/<?php echo date("Y"); ?>"><i class="fa fa-circle-o"></i> Tahun <?php echo date("Y"); ?></a></li>
-                <li><a href="<?php echo base_url();?>users/gajiberkala/penjagaan/<?php echo date("Y")+1; ?>""><i class="fa fa-circle-o"></i> Tahun <?php echo date("Y")+1; ?></a></li>
-              </ul>
-            </li>
-            <li><a href="<?php echo base_url();?>users/gajiberkala/usulan"><i class="fa fa-circle-o"></i> Usulan</a></li>
-            <li><a href="<?php echo base_url();?>users/gajiberkala/laporan"><i class="fa fa-circle-o"></i> Laporan</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="<?php echo base_url();?>users/jendela">
+          <a href="<?php //echo base_url();?>new/jendela">
             <i class="fa fa-th-large"></i> <span>Jendela</span>
           </a>
-        </li>
+        </li> -->
         <li class="treeview">
-          <a href="<?php echo base_url();?>users/contact">
+          <a href="<?php echo base_url();?>new/contact">
             <i class="fa fa-phone-square"></i> <span>Kontak</span>
           </a>
-        </li>  
+        </li>    
         <li class="treeview">
-          <a href="<?php echo base_url();?>users/about">
+          <a href="<?php echo base_url();?>new/about">
             <i class="fa fa-cube"></i> <span>Tentang</span>
           </a>
         </li>

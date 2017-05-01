@@ -23,18 +23,26 @@ class Auth extends CI_Controller {
 			// redirect them to the login page
 			redirect('auth/login', 'refresh');			
 		}
-/*		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
-		{
-			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an administrator to view this page.');
-		}*/
-/*		elseif ($this->ion_auth->in_group('usersopd')) // jika user group usersopd
+		elseif ($this->ion_auth->in_group('usersopd')) // jika user group usersopd
 		{
 			redirect('users/dashboard', 'refresh');
+		}
+		elseif ($this->ion_auth->in_group('units')) // jika user group units
+		{
+			redirect('units/dashboard', 'refresh');
 		}
 		elseif ($this->ion_auth->in_group('managers')) // jika user group managers
 		{
 			redirect('managers/dashboard', 'refresh');
+		}
+		elseif ($this->ion_auth->in_group('new')) // jika user group new
+		{
+			redirect('new/dashboard', 'refresh');
+		}
+		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
+		{
+			// redirect them to the home page because they must be an administrator to view this
+			return show_error('You must be an administrator to view this page.');
 		}
 		else
 		{
@@ -49,7 +57,7 @@ class Auth extends CI_Controller {
 			}
 
 			$this->_render_page('auth/index', $this->data);
-		}*/
+		}
 	}
 
 	// log the user in
@@ -85,6 +93,10 @@ class Auth extends CI_Controller {
 				elseif ($this->ion_auth->in_group('units')) // jika user group units
 				{
 					redirect('units/dashboard', 'refresh');
+				}
+				elseif ($this->ion_auth->in_group('new')) // jika user group new
+				{
+					redirect('new/dashboard', 'refresh');
 				}
 				else
 				{

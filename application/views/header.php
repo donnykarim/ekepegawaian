@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SAKTi</title>
+  <title>SAKTi (Sistem Aplikasi Kepegawaian Terintegrasi)</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -18,12 +18,17 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/skins/skin-blue.min.css">
 
+  <meta name="description" content="Sistem Aplikasi Kepegawaian Terintegrasi yang dikelola oleh Badan Kepegawaian Pendidikan dan Pelatihan Kabupaten Demak untuk memberikan layanan kepegawaian daring">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <link rel="icon" type="image/png" href="<?php echo base_url();?>assets/dist/img/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<?php echo base_url();?>assets/dist/img/favicon/favicon-16x16.png" sizes="16x16" />
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->

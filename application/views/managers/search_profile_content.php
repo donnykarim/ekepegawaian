@@ -139,7 +139,7 @@
                   <th>Jab</th>
                   <th>Unor</th>
                   <th>Esel</th>
-                  <th style="width: 40px">Tmt</th>
+                  <th>Tmt</th>
                 </tr>
                 <?php 
                   $no = 0;
@@ -168,7 +168,7 @@
                   <th>Tingkat</th>
                   <th>Jurusan</th>
                   <th>Lembaga</th>
-                  <th style="width: 40px">Tahun</th>
+                  <th>Tahun</th>
                 </tr>
                 <?php 
                   $no = 0;
@@ -198,7 +198,7 @@
                   <th>Nama</th>
                   <th>Penyelenggara</th>
                   <th>Jam</th>
-                  <th style="width: 40px">Tmt</th>
+                  <th>Tmt</th>
                 </tr>
                 <?php 
                   $no = 0;

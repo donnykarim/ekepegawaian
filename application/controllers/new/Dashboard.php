@@ -23,7 +23,7 @@ class Dashboard extends CI_Controller {
 			// redirect them to the login page
 			redirect('auth/login', 'refresh');			
 		}
-		elseif (!$this->ion_auth->in_group('managers')) // remove this elseif if you want to enable this for non-admins
+		elseif (!$this->ion_auth->in_group('new')) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
 			return show_error('You must not be here.');
@@ -38,8 +38,8 @@ class Dashboard extends CI_Controller {
         	$data['user_kd_unor'] = $user->kd_unor;
 
 			$this->load->view('header',$data);
-			$this->load->view('managers/sidebar');
-			$this->load->view('managers/dashboard_content');
+			$this->load->view('new/sidebar');
+			$this->load->view('new/dashboard_content');
 			$this->load->view('footer');
 		}
 	}
